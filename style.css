@@ -141,7 +141,7 @@ a:hover {
 
 /* === Introduction 페이지 제일 위 큰 제목 추가 === */
 .intro-main-title {
-    font-size: 28px; /* Research Field 제목과 같은 크기 */
+    font-size: 36px; /* Research Field 제목과 같은 크기 */
     margin-bottom: 30px;
     color: #2c3e50; /* Research Field 제목과 같은 색상 */
     border-bottom: 2px solid #eee; /* Research Field 제목과 같은 밑줄 */
@@ -164,8 +164,9 @@ a:hover {
     margin-bottom: 100px;
 }
 
-/* Research Field 영역 (왼쪽 정렬) */
+/* Research Fields 영역 (왼쪽 정렬) */
 .research-fields {
+    font-size: 36px;
     text-align: center;
     line-height: 1.8;
     max-width: 1200px;
