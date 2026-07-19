@@ -15,6 +15,7 @@ body {
 a {
     text-decoration: none;
     color: #333;
+    transition: color 0.2s;
 }
 
 a:hover {
@@ -26,6 +27,7 @@ a:hover {
     background-color: #fff;
     border-bottom: 1px solid #e1e4e8;
     padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .header-wrap {
@@ -35,6 +37,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    flex-wrap: wrap; /* 화면 작을 때 줄바꿈 되도록 */
 }
 
 .logo {
@@ -46,14 +49,16 @@ a:hover {
 .main-nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* 메뉴 많을 때 줄바꿈 */
 }
 
 .main-nav li {
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 .main-nav a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     padding: 5px 0;
     border-bottom: 2px solid transparent;
@@ -63,49 +68,15 @@ a:hover {
     border-bottom: 2px solid #0056b3;
 }
 
-/* 메인 컨텐츠 래퍼 */
+/* 메인 컨텐츠 래퍼 (좌측 메뉴 없이 전체 너비 사용) */
 .content-wrap {
-    max-width: 1200px;
+    max-width: 1000px; /* 본문 너비 약간 줄임 */
     margin: 40px auto;
-    display: flex;
     padding: 0 20px;
-}
-
-/* 좌측 서브메뉴 */
-.sidebar {
-    width: 200px;
-    margin-right: 40px;
-}
-
-.sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 10px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin-bottom: 10px;
-}
-
-.sidebar a {
-    display: block;
-    padding: 5px;
-    color: #555;
-}
-
-.sidebar a:hover {
-    background-color: #f1f1f1;
-    color: #0056b3;
 }
 
 /* 본문 영역 */
 .main-content {
-    flex: 1;
     background-color: #fff;
     padding: 40px;
     border-radius: 8px;
@@ -129,15 +100,15 @@ a:hover {
     margin-bottom: 15px;
 }
 
-/* === 여기가 바로 사진 디자인 코드입니다! === */
+/* 본문 이미지 스타일 */
 .main-image {
-    width: 100%;          /* 이미지를 본문 너비에 맞춤 */
-    max-width: 600px;     /* 너무 커지지 않게 최대 크기 지정 */
-    height: auto;         /* 높이는 자동으로 비율에 맞춤 */
-    display: block;       /* 이미지를 가운데 정렬하기 위해 설정 */
-    margin: 0 auto 30px;  /* 위아래 여백 30px, 좌우 자동(가운데 정렬) */
-    border-radius: 8px;   /* 사진 모서리를 살짝 둥글게 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 사진에 은은한 그림자 */
+    width: 100%;
+    max-width: 800px; /* 본문이 넓어져서 이미지도 조금 키움 */
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* 푸터 */
