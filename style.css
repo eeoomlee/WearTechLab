@@ -191,7 +191,7 @@ a:hover {
     max-width: 1000px; /* 큰 그림으로 설정 */
     height: auto;
     display: block;
-    margin: 0 auto 60px; /* 가운데 정렬, 아래 여백 60px */
+    margin: 50px auto 60px; /* 가운데 정렬, 아래 여백 60px */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
