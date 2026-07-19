@@ -202,6 +202,7 @@ a:hover {
 
 /* 아래 이미지 */
 .intro-image {
+    margin-top: 50px;
     width: 100%;
     max-width: 1000px; /* 큰 그림으로 설정 */
     height: auto;
