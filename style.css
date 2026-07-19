@@ -252,8 +252,8 @@ a:hover {
 
 .cv-section-title {
     font-size: 20px;
-    margin-top: 100px; /* <--- 40px에서 100px로 변경! (각 항목 위쪽 여백 2배) */
-    margin-bottom: 60px; /* (소제목과 내용물은 붙여주기) */
+    margin-top: 100px;
+    margin-bottom: 0px; /* <--- 60px에서 0px로 변경! */
     color: #2c3e50;
     border-left: 4px solid #c97b8e;
     padding-left: 10px;
@@ -262,7 +262,8 @@ a:hover {
 .cv-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px; /* <--- 이 줄을 추가하세요! (리스트 자체를 아래로 밀어냄) */
 }
 
 .cv-list li {
