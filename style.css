@@ -101,6 +101,62 @@ a:hover {
     margin-bottom: 15px;
 }
 
+/* === Members 드롭다운 메뉴 디자인 === */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* 드롭다운 메뉴 기본 버튼 스타일 (기존 메뉴와 동일하게) */
+.dropbtn {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* 드롭다운 펼쳐지는 내용물 (기본적으로 숨겨둠) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+/* 드롭다운 안의 메뉴 링크 스타일 */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* 마우스 올렸을 때 효과 */
+.dropdown-content a:hover {
+    background-color: #fafafa;
+    color: #c97b8e;
+}
+
+/* 마우스를 메뉴에 올리면 펼쳐지게 함 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 메인 메뉴에 마우스 올렸을 때 밑줄 효과 */
+.dropdown:hover .dropbtn {
+    border-bottom: 2px solid #c97b8e;
+}
+
+
 /* 본문 이미지 스타일 (index.html용) */
 .main-image {
     width: 100%;
