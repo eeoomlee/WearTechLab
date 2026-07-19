@@ -262,7 +262,7 @@ a:hover {
 .cv-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* <--- 학위논문 제목 위쪽 여백 */
     margin-top: 40px; /* <--- 이 줄을 추가하세요! (리스트 자체를 아래로 밀어냄) */
 }
 
