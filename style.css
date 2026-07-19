@@ -141,7 +141,7 @@ a:hover {
 
 /* Introduction 제일 위 큰 제목 (Research Field 제목과 동일 스타일) */
 .intro-main-title {
-    font-size: 28px; 
+    font-size: 32px; 
     margin-bottom: 30px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
