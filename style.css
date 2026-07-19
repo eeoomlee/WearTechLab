@@ -127,7 +127,7 @@ a:hover {
 }
 
 .main-content-image-only img {
-    max-width: 100%;     /* 화면 너비에 맞춰 최대한 크게 */
+    max-width: 800px;     /* 화면 너비에 맞춰 최대한 크게 */
     height: auto;        /* 높이는 비율에 맞춰 자동 조절 */
     display: block;      /* 가운데 정렬을 위해 블록 처리 */
     margin: 0 auto;      /* 좌우 여백 자동으로 가운데 정렬 */
