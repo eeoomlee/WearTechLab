@@ -342,7 +342,7 @@ a:hover {
 }
 
 .course-name {
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: 700; /* <--- bold 대신 700으로 더 확실하게! */
     color: #34495e;
     margin-bottom: 15px;
