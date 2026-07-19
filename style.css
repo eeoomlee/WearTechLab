@@ -142,25 +142,15 @@ a:hover {
 /* 위쪽 글자 가운데 정렬 */
 .intro-top-text {
     text-align: center;
+    font-size: 18px;
     line-height: 1.8;
     margin-bottom: 50px;
-    max-width: 900px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
+    max-width: 1200px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* 가운데 이미지 */
-.intro-image {
-    width: 100%;
-    max-width: 1000px; /* 큰 그림으로 설정 */
-    height: auto;
-    display: block;
-    margin: 0 auto 60px; /* 가운데 정렬, 아래 여백 60px */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* 아래쪽 Research Field 영역 (왼쪽 정렬) */
+/* Research Field 영역 (왼쪽 정렬) */
 .research-field {
     text-align: left;
     line-height: 1.8;
@@ -193,4 +183,15 @@ a:hover {
 .research-field li {
     margin-bottom: 5px;
     color: #555;
+}
+
+/* 아래 이미지 */
+.intro-image {
+    width: 100%;
+    max-width: 1000px; /* 큰 그림으로 설정 */
+    height: auto;
+    display: block;
+    margin: 0 auto 60px; /* 가운데 정렬, 아래 여백 60px */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
