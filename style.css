@@ -107,7 +107,6 @@ a:hover {
     display: inline-block;
 }
 
-/* 드롭다운 메뉴 기본 버튼 스타일 (기존 메뉴와 동일하게) */
 .dropbtn {
     font-size: 18px;
     font-weight: 500;
@@ -116,7 +115,6 @@ a:hover {
     cursor: pointer;
 }
 
-/* 드롭다운 펼쳐지는 내용물 (기본적으로 숨겨둠) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -129,7 +127,6 @@ a:hover {
     border: 1px solid #eee;
 }
 
-/* 드롭다운 안의 메뉴 링크 스타일 */
 .dropdown-content a {
     color: #333;
     padding: 12px 16px;
@@ -140,42 +137,17 @@ a:hover {
     border-bottom: 1px solid #f1f1f1;
 }
 
-/* 마우스 올렸을 때 효과 */
 .dropdown-content a:hover {
     background-color: #fafafa;
     color: #c97b8e;
 }
 
-/* 마우스를 메뉴에 올리면 펼쳐지게 함 */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* 메인 메뉴에 마우스 올렸을 때 밑줄 효과 */
 .dropdown:hover .dropbtn {
     border-bottom: 2px solid #c97b8e;
-}
-
-
-/* 본문 이미지 스타일 (index.html용) */
-.main-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* 푸터 */
-.site-footer {
-    text-align: center;
-    padding: 30px 0;
-    border-top: 1px solid #e1e4e8;
-    margin-top: 60px;
-    font-size: 14px;
-    color: #777;
 }
 
 /* === index.html 이미지만 크게 가운데 정렬 === */
@@ -194,22 +166,19 @@ a:hover {
 }
 
 /* === Intro 페이지 전용 디자인 === */
-
-/* Introduction 제일 위 큰 제목 (Research Field 제목과 동일 스타일) */
 .intro-main-title {
-    font-size: 32px; 
+    font-size: 28px; 
     font-weight: bold;
     margin-bottom: 30px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     text-align: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* 위쪽 설명 글자 가운데 정렬 */
 .intro-top-text {
     text-align: center;
     font-size: 18px;
@@ -220,7 +189,6 @@ a:hover {
     margin-right: auto;
 }
 
-/* Research Field 영역 (가운데 정렬로 수정됨!) */
 .research-field {
     text-align: center; 
     font-size: 18px;
@@ -230,14 +198,14 @@ a:hover {
 }
 
 .research-field h3 {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 30px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
 }
 
-/* 소제목들을 굵은 폰트로 처리 */
 .field-title {
     font-size: 18px;
     font-weight: bold;
@@ -256,7 +224,6 @@ a:hover {
     color: #555;
 }
 
-/* 아래 이미지 */
 .intro-image {
     width: 100%;
     max-width: 1000px;
@@ -265,4 +232,76 @@ a:hover {
     margin: 50px auto 60px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === PI 페이지 디자인 추가 === */
+.page-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.pi-layout {
+    display: flex; /* 사진과 글을 가로로 나란히 배치 */
+    gap: 50px; /* 사진과 글 사이의 간격 */
+    align-items: flex-start; /* 위쪽으로 정렬 */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pi-photo img {
+    width: 300px; /* 사진 크기 */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pi-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.pi-info .pi-title {
+    font-size: 16px;
+    color: #c97b8e; /* 톤다운 핑크색으로 포인트 */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.pi-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.pi-contact {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.pi-contact li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.pi-contact strong {
+    color: #333;
+}
+
+/* 모바일에서 볼 때는 세로로 쌓이도록 설정 */
+@media (max-width: 768px) {
+    .pi-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .pi-contact {
+        text-align: center;
+    }
 }
