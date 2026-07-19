@@ -119,4 +119,93 @@ a:hover {
     border-top: 1px solid #e1e4e8;
     margin-top: 60px;
     font-size: 14px;
-    color: #777
+    color: #777;
+}
+
+/* === index.html 이미지만 크게 가운데 정렬 === */
+.main-content-image-only {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-content-image-only img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === Intro 페이지 전용 디자인 === */
+
+/* Introduction 제일 위 큰 제목 (Research Field 제목과 동일 스타일) */
+.intro-main-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 위쪽 설명 글자 가운데 정렬 */
+.intro-top-text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 100px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Research Field 영역 (가운데 정렬로 수정됨!) */
+.research-field {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.research-field h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* 소제목들을 굵은 폰트로 처리 */
+.field-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.research-field ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.research-field li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* 아래 이미지 */
+.intro-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 50px auto 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
