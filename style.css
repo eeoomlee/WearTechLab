@@ -148,6 +148,8 @@ a:hover {
     max-width: 1200px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 2px solid #eee; /* 밑줄 */
+    margin-bottom: 10px;
 }
 
 /* Research Field 영역 (왼쪽 정렬) */
