@@ -236,7 +236,7 @@ a:hover {
 
 /* === PI 이력서 디자인 추가 === */
 .pi-photo img {
-    width: 100px; /* <--- 300px에서 100px로 줄이기! */
+    width: 200px; /* <--- 300px에서 100px로 줄이기! */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
