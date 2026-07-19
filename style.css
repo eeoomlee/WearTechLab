@@ -70,7 +70,7 @@ a:hover {
 
 /* 메인 컨텐츠 래퍼 (좌측 메뉴 없이 전체 너비 사용) */
 .content-wrap {
-    max-width: 1000px; /* 본문 너비 약간 줄임 */
+    max-width: 1400px; /* 본문 너비 약간 줄임 */
     margin: 40px auto;
     padding: 0 20px;
 }
