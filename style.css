@@ -255,7 +255,7 @@ a:hover {
     margin-top: 100px;
     margin-bottom: 0px; /* <--- 60px에서 0px로 변경! */
     color: #2c3e50;
-    border-left: 4px solid #c97b8e;
+    border-left: 3px solid #c97b8e;
     padding-left: 10px;
 }
 
