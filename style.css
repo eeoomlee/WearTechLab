@@ -63,7 +63,7 @@ a:hover {
     border-bottom: 2px solid #0056b3;
 }
 
-/* 메인 컨텐츠 래퍼 (좌측 메뉴 + 본문) */
+/* 메인 컨텐츠 래퍼 */
 .content-wrap {
     max-width: 1200px;
     margin: 40px auto;
@@ -127,6 +127,17 @@ a:hover {
 
 .main-content p {
     margin-bottom: 15px;
+}
+
+/* === 여기가 바로 사진 디자인 코드입니다! === */
+.main-image {
+    width: 100%;          /* 이미지를 본문 너비에 맞춤 */
+    max-width: 600px;     /* 너무 커지지 않게 최대 크기 지정 */
+    height: auto;         /* 높이는 자동으로 비율에 맞춤 */
+    display: block;       /* 이미지를 가운데 정렬하기 위해 설정 */
+    margin: 0 auto 30px;  /* 위아래 여백 30px, 좌우 자동(가운데 정렬) */
+    border-radius: 8px;   /* 사진 모서리를 살짝 둥글게 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 사진에 은은한 그림자 */
 }
 
 /* 푸터 */
