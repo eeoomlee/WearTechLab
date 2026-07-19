@@ -236,7 +236,7 @@ a:hover {
 
 /* === PI 이력서 디자인 추가 === */
 .pi-photo img {
-    width: 200px; /* <--- 300px에서 100px로 줄이기! */
+    width: 200px; /* <--- 300px에서 200px로 줄이기! */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -252,8 +252,8 @@ a:hover {
 
 .cv-section-title {
     font-size: 20px;
-    margin-top: 80px; /* <--- 40px에서 80px로 변경! (각 항목 위쪽 여백 2배) */
-    margin-bottom: 20px; /* <--- 60px에서 15px로 줄이기! (소제목과 내용물은 붙여주기) */
+    margin-top: 100px; /* <--- 40px에서 100px로 변경! (각 항목 위쪽 여백 2배) */
+    margin-bottom: 60px; /* (소제목과 내용물은 붙여주기) */
     color: #2c3e50;
     border-left: 4px solid #c97b8e;
     padding-left: 10px;
