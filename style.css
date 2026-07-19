@@ -152,7 +152,7 @@ a:hover {
 
 /* Research Field 영역 (왼쪽 정렬) */
 .research-field {
-    text-align: left;
+    text-align: center;
     line-height: 1.8;
     max-width: 900px;
     margin: 0 auto; /* 내용물은 왼쪽 정렬이지만, 박스 자체는 가운데에 위치하도록 설정 */
@@ -177,7 +177,7 @@ a:hover {
 
 .research-field ul {
     list-style: none; /* 기본 점 제거 */
-    padding-left: 20px;
+    padding-left: 0;
 }
 
 .research-field li {
@@ -194,4 +194,17 @@ a:hover {
     margin: 50px auto 60px; /* 가운데 정렬, 아래 여백 60px */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* === Introduction 페이지 제일 위 큰 제목 추가 === */
+.intro-main-title {
+    font-size: 24px; /* Research Field 제목과 같은 크기 */
+    margin-bottom: 30px;
+    color: #2c3e50; /* Research Field 제목과 같은 색상 */
+    border-bottom: 2px solid #eee; /* Research Field 제목과 같은 밑줄 */
+    padding-bottom: 10px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
