@@ -361,3 +361,51 @@ a:hover {
     color: #888;
     font-style: italic;
 }
+
+/* === Research Paper 페이지 디자인 === */
+.paper-list {
+    list-style: none;
+    padding: 0;
+}
+
+.paper-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.paper-item:last-child {
+    border-bottom: none;
+}
+
+/* 하단 페이지 번호 버튼 디자인 */
+.pagination {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pagination button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #f1f1f1;
+}
+
+/* 현재 보고 있는 페이지 버튼 색상 (핑크색) */
+.pagination button.active {
+    background-color: #c97b8e;
+    color: white;
+    border-color: #c97b8e;
+}
