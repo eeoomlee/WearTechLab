@@ -265,8 +265,8 @@ a:hover {
 .cv-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 60px; /* <--- 0px에서 60px로 변경! (다음 소제목과의 거리 벌리기) */
-    margin-top: 40px; /* (소제목과 날짜 사이 간격은 그대로 유지됨!) */
+    margin-bottom: 50px; /* <--- 0px에서 60px로 변경! (다음 소제목과의 거리 벌리기) */
+    margin-top: 30px; /* (소제목과 날짜 사이 간격은 그대로 유지됨!) */
 }
 
 .cv-list li {
