@@ -197,7 +197,8 @@ a:hover {
 
 /* Introduction 제일 위 큰 제목 (Research Field 제목과 동일 스타일) */
 .intro-main-title {
-    font-size: 36px; 
+    font-size: 32px; 
+    font-weight: bold;
     margin-bottom: 30px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
@@ -229,7 +230,7 @@ a:hover {
 }
 
 .research-field h3 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 30px;
     color: #2c3e50;
     border-bottom: 2px solid #eee;
