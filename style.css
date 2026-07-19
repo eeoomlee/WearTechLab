@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-    color: #d88ba0;
+    color: #c97b8e;
 }
 
 /* 헤더 (상단 로고 & 메뉴) */
@@ -65,7 +65,7 @@ a:hover {
 }
 
 .main-nav a:hover {
-    border-bottom: 2px solid #d88ba0;
+    border-bottom: 2px solid #c97b8e;
 }
 
 /* 메인 컨텐츠 래퍼 (좌측 메뉴 없이 전체 너비 사용) */
