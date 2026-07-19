@@ -245,7 +245,7 @@ a:hover {
     list-style: none;
     padding: 0;
     margin-top: 20px;
-    margin-bottom: 60px; /* <--- 추가! (Tel과 Education 사이 여백 넓히기) */
+    margin-bottom: 70px; /* <--- 추가! (Tel과 Education 사이 여백 넓히기) */
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
@@ -253,7 +253,7 @@ a:hover {
 .cv-section-title {
     font-size: 20px;
     margin-top: 80px; /* <--- 40px에서 80px로 변경! (각 항목 위쪽 여백 2배) */
-    margin-bottom: 15px; /* <--- 60px에서 15px로 줄이기! (소제목과 내용물은 붙여주기) */
+    margin-bottom: 20px; /* <--- 60px에서 15px로 줄이기! (소제목과 내용물은 붙여주기) */
     color: #2c3e50;
     border-left: 4px solid #c97b8e;
     padding-left: 10px;
@@ -262,11 +262,11 @@ a:hover {
 .cv-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .cv-list li {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     line-height: 1.6;
     color: #555;
 }
