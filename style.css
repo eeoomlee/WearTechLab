@@ -288,3 +288,13 @@ a:hover {
     line-height: 1.8;
     color: #555;
 }
+
+/* 푸터 */
+.site-footer {
+    padding: 30px 0;
+    text-align: center; /* <--- 이 줄을 추가하세요! (가운데 정렬) */
+    border-top: 1px solid #e1e4e8;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #777;
+}
