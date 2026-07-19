@@ -37,21 +37,20 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    flex-wrap: wrap; /* 화면 작을 때 줄바꿈 되도록 */
+    flex-wrap: wrap;
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
     color: #4a4a4a;
-    letter-spacing: -1.5px; /* <--- 이 줄을 추가하세요! (자간을 1px 좁힘) */
+    letter-spacing: -1.5px;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* 메뉴 많을 때 줄바꿈 */
-    
+    flex-wrap: wrap;
 }
 
 .main-nav li {
@@ -70,9 +69,9 @@ a:hover {
     border-bottom: 2px solid #c97b8e;
 }
 
-/* 메인 컨텐츠 래퍼 (좌측 메뉴 없이 전체 너비 사용) */
+/* 메인 컨텐츠 래퍼 */
 .content-wrap {
-    max-width: 1600px; /* 본문 너비 약간 줄임 */
+    max-width: 1600px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -102,10 +101,10 @@ a:hover {
     margin-bottom: 15px;
 }
 
-/* 본문 이미지 스타일 */
+/* 본문 이미지 스타일 (index.html용) */
 .main-image {
     width: 100%;
-    max-width: 800px; /* 본문이 넓어져서 이미지도 조금 키움 */
+    max-width: 800px;
     height: auto;
     display: block;
     margin: 0 auto 30px;
@@ -120,95 +119,4 @@ a:hover {
     border-top: 1px solid #e1e4e8;
     margin-top: 60px;
     font-size: 14px;
-    color: #777;
-}
-/* === 이미지만 크게 가운데 정렬하는 코드 추가 === */
-.main-content-image-only {
-    text-align: center; /* 이미지를 가운데 정렬 */
-    padding: 20px;
-}
-
-.main-content-image-only img {
-    max-width: 100%;     /* 화면 너비에 맞춰 최대한 크게 */
-    height: auto;        /* 높이는 비율에 맞춰 자동 조절 */
-    display: block;      /* 가운데 정렬을 위해 블록 처리 */
-    margin: 0 auto;      /* 좌우 여백 자동으로 가운데 정렬 */
-    border-radius: 8px;  /* 모서리 살짝 둥글게 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 은은한 그림자 */
-}
-
-/* === Intro 페이지 전용 디자인 추가 === */
-
-/* === Introduction 페이지 제일 위 큰 제목 추가 === */
-.intro-main-title {
-    font-size: 36px; /* Research Field 제목과 같은 크기 */
-    margin-bottom: 30px;
-    color: #2c3e50; /* Research Field 제목과 같은 색상 */
-    border-bottom: 2px solid #eee; /* Research Field 제목과 같은 밑줄 */
-    padding-bottom: 10px;
-    text-align: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 글자 가운데 정렬 */
-.intro-top-text {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 50px;
-    max-width: 900px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-}
-
-/* Research Fields 영역 (왼쪽 정렬) */
-.research-fields {
-    font-size: 36px;
-    text-align: center;
-    line-height: 1.8;
-    max-width: 1200px;
-    margin: 0 auto; /* 내용물은 왼쪽 정렬이지만, 박스 자체는 가운데에 위치하도록 설정 */
-}
-
-.research-fields h3 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #2c3e50;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-/* 소제목들을 굵은 폰트로 처리 */
-.field-title {
-    font-size: 18px;
-    font-weight: bold; /* 굵게 */
-    color: #34495e;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.research-fields ul {
-    list-style: none; /* 기본 점 제거 */
-    padding-left: 0;
-}
-
-.research-fields li {
-    margin-bottom: 5px;
-    color: #555;
-}
-
-/* 아래 이미지 */
-.intro-image {
-    margin-top: 50px;
-    width: 100%;
-    max-width: 1000px; /* 큰 그림으로 설정 */
-    height: auto;
-    display: block;
-    margin: 50px auto 60px; /* 가운데 정렬, 아래 여백 60px */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
+    color: #777
