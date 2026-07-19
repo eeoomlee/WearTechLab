@@ -1,71 +1,72 @@
-/* === PI 페이지 디자인 추가 === */
-.page-title {
-    font-size: 28px;
-    margin-bottom: 40px;
-    color: #2c3e50;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal Investigator - WearTech Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 (로고 + 상단 메뉴) -->
+    <header class="site-header">
+        <div class="header-wrap">
+            <a href="index.html" class="logo">WearTech Lab</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="intro.html">Introduction</a></li>
+                    
+                    <!-- Members 드롭다운 메뉴 -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Members</a>
+                        <div class="dropdown-content">
+                            <a href="pi.html">Principal Investigator</a>
+                            <a href="students.html">Student Researchers</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="lab-news.html">Lab News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-.pi-layout {
-    display: flex; /* 사진과 글을 가로로 나란히 배치 */
-    gap: 50px; /* 사진과 글 사이의 간격 */
-    align-items: flex-start; /* 위쪽으로 정렬 */
-    max-width: 1000px;
-    margin: 0 auto;
-}
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="content-wrap">
+        <section class="main-content">
+            
+            <h1 class="page-title">Principal Investigator</h1>
+            
+            <!-- PI 소개 레이아웃 (왼쪽 사진, 오른쪽 글) -->
+            <div class="pi-layout">
+                <!-- 왼쪽: 교수님 사진 -->
+                <div class="pi-photo">
+                    <img src="profile.jpg" alt="Professor Photo">
+                </div>
+                
+                <!-- 오른쪽: 교수님 소개 -->
+                <div class="pi-info">
+                    <h2>[이름 교수님]</h2>
+                    <p class="pi-title">[직책, 예: Assistant Professor]</p>
+                    <p>[여기에 교수님 소개 글을 적어주세요. 학력, 연구 관심사, 경력 등을 자유롭게 적으시면 됩니다.]</p>
+                    
+                    <ul class="pi-contact">
+                        <li><strong>Email:</strong> eeoom@khu.ac.kr</li>
+                        <li><strong>Office:</strong> Room 421</li>
+                        <li><strong>Tel:</strong> +82-2-961-0831</li>
+                    </ul>
+                </div>
+            </div>
 
-.pi-photo img {
-    width: 300px; /* 사진 크기 */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+        </section>
+    </main>
 
-.pi-info h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    color: #2c3e50;
-}
-
-.pi-info .pi-title {
-    font-size: 16px;
-    color: #c97b8e; /* 톤다운 핑크색으로 포인트 */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.pi-info p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.pi-contact {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.pi-contact li {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.pi-contact strong {
-    color: #333;
-}
-
-/* 모바일에서 볼 때는 세로로 쌓이도록 설정 */
-@media (max-width: 768px) {
-    .pi-layout {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .pi-contact {
-        text-align: center;
-    }
-}
+    <!-- 푸터 -->
+    <footer class="site-footer">
+        <p>COPYRIGHT © 2024 BY WearTech LAB. All Rights Reserved.</p>
+        <p>Tel. +82-2-961-0831 | Email. eeoom@khu.ac.kr</p>
+    </footer>
+</body>
+</html>
