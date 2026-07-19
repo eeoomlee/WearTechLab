@@ -44,7 +44,7 @@ a:hover {
     font-size: 28px;
     font-weight: bold;
     color: #4a4a4a;
-    letter-spacing: -1px; /* <--- 이 줄을 추가하세요! (자간을 1px 좁힘) */
+    letter-spacing: -1.5px; /* <--- 이 줄을 추가하세요! (자간을 1px 좁힘) */
 }
 
 .main-nav ul {
