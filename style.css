@@ -152,13 +152,13 @@ a:hover {
     margin-right: auto;
 }
 
-/* 위쪽 글자 가운데 정렬 */
+/* 글자 가운데 정렬 */
 .intro-top-text {
     text-align: center;
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 50px;
-    max-width: 1200px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
+    max-width: 900px; /* 글자가 너무 퍼지지 않게 중앙 영역 제한 */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
