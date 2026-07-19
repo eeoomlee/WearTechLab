@@ -120,3 +120,17 @@ a:hover {
     font-size: 14px;
     color: #777;
 }
+/* === 이미지만 크게 가운데 정렬하는 코드 추가 === */
+.main-content-image-only {
+    text-align: center; /* 이미지를 가운데 정렬 */
+    padding: 20px;
+}
+
+.main-content-image-only img {
+    max-width: 100%;     /* 화면 너비에 맞춰 최대한 크게 */
+    height: auto;        /* 높이는 비율에 맞춰 자동 조절 */
+    display: block;      /* 가운데 정렬을 위해 블록 처리 */
+    margin: 0 auto;      /* 좌우 여백 자동으로 가운데 정렬 */
+    border-radius: 8px;  /* 모서리 살짝 둥글게 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 은은한 그림자 */
+}
