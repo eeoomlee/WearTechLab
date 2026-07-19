@@ -334,7 +334,6 @@ a:hover {
 .course-item {
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
 }
 
 .course-item:last-child {
