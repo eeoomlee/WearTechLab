@@ -677,7 +677,7 @@ a:hover {
 /* 사진 크기를 모두 동일하게 고정 (가로 100%, 세로 300px) */
 .student-card img {
     width: 100%;
-    aspect-ratio: 1/1; /* 정사각형으로 고정! */
+    aspect-ratio: 3/4; /* 3/4로 고정! */
     object-fit: cover; /* 찌그러지지 않게 비율 유지하며 자르기 */
     display: block;
 }
