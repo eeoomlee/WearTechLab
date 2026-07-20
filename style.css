@@ -569,3 +569,72 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* === 프로젝트 팝업창(Modal) 디자인 === */
+.modal {
+    display: none; /* 평소에는 숨김 */
+    position: fixed;
+    z-index: 10000; /* 화면 가장 위에 위치 (이메일 게이트보다 위) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* 반투명 어두운 배경 */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex; /* 활성화 시 화면에 보임 */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh; /* 화면 높이의 80%까지만 차지 */
+    overflow-y: auto; /* 내용이 길어지면 스크롤바 생성 */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: modalFadeIn 0.3s; /* 부드러운 등장 효과 */
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #c97b8e; /* 마우스 올렸을 때 핑크색 */
+}
+
+/* 팝업창 안의 내용물 디자인 */
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.modal-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* 숨겨진 상세 내용 (화면에 안 보이게 설정) */
+.hidden-content {
+    display: none;
+}
