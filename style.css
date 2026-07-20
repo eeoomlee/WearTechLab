@@ -517,9 +517,9 @@ a:hover {
 /* === Research Projects 9칸 격자 디자인 === */
 .project-grid-9 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3열로 정렬 (가로 3개) */
-    gap: 20px; /* 칸 사이 간격 */
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 3열로 정렬 (가로 3개) */
+    gap: 25px; /* 칸 사이 간격 */
+    margin-top: 25px;
 }
 
 .project-card-9 {
