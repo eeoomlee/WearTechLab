@@ -655,7 +655,7 @@ a:hover {
 /* 가로로 3개씩 정렬 */
 .student-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
