@@ -680,6 +680,10 @@ a:hover {
     aspect-ratio: 3/4; /* 3/4로 고정! */
     object-fit: cover; /* 찌그러지지 않게 비율 유지하며 자르기 */
     display: block;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .student-info {
