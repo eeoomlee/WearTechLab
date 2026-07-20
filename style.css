@@ -696,3 +696,18 @@ a:hover {
     font-size: 16px;
     color: #888;
 }
+
+/* === 팝업창 사진 크기 살짝 줄이기 === */
+
+/* 메인 사진 (첫 번째 큰 사진) */
+#modal-body > img {
+    width: 80% !important; /* 100%에서 80%로 줄임 */
+    margin: 0 auto 20px auto !important; /* 가운데 정렬 */
+    display: block !important;
+}
+
+/* 추가 사진 갤러리 전체 */
+.modal-gallery {
+    max-width: 90%; /* 갤러리 전체 크기를 90%로 제한 */
+    margin: 30px auto 0 auto; /* 가운데 정렬 */
+}
