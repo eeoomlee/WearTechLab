@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - WearTech Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ★ 이메일 입력 게이트 ★ -->
+    <div id="email-gate" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h2>Please enter your email to view the content</h2>
+        <p>Your email will be used only for laboratory records.</p>
+        <input type="email" id="user-email" placeholder="Email address" style="padding: 10px; font-size: 16px; width: 300px; margin-top: 20px; border: 1px solid #ccc; border-radius: 4px;">
+        <button onclick="submitEmail()" style="padding: 10px 20px; font-size: 16px; margin-top: 10px; background: #c97b8e; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+        <p id="error-msg" style="color: red; margin-top: 10px; display: none;">Please enter a valid email address.</p>
+    </div>
+
+    <!-- 구글 폼 제출용 숨겨진 iframe -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+    <script>
+        function submitEmail() {
+            const email = document.getElementById('user-email').value;
+            const errorMsg = document.getElementById('error-msg');
+            
+            if (!email || !email.includes('@')) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            const formUrl = 'https://docs.google.com/forms/d/e/15cYboe1F59UbJ-4lFtL-BDcmcmAx3gh7q1FQH0yE3YQ/formResponse';
+            
+            const form = document.createElement('form');
+            form.action = formUrl;
+            form.method = 'POST';
+            form.target = 'hidden_iframe';
+
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'entry.435364869';
+            input.value = email;
+            form.appendChild(input);
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+
+            document.getElementById('email-gate').style.display = 'none';
+        }
+    </script>
+    <!-- ★ 여기까지 이메일 게이트 코드 ★ -->
+
+    <!-- 헤더 (로고 + 상단 메뉴) -->
+    <header class="site-header">
+        <div class="header-wrap">
+            <a href="index.html" class="logo">WearTech Lab</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="intro.html">Introduction</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Members</a>
+                        <div class="dropdown-content">
+                            <a href="pi.html">Principal Investigator</a>
+                            <a href="students.html">Student Researchers</a>
+                        </div>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Publications</a>
+                        <div class="dropdown-content">
+                            <a href="research-paper.html">Research Paper</a>
+                            <a href="presentation.html">Presentation</a>
+                            <a href="patent.html">Patent</a>
+                        </div>
+                    </li>
+                    <li><a href="lab-news.html">Lab News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrap">
+        <section class="main-content">
+            <h1 class="page-title">Research</h1>
+            
+            <!-- 탭 버튼 -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('funded')">Funded Projects</button>
+                <button class="tab-btn" onclick="showTab('projects')">Research Projects</button>
+            </div>
+
+            <!-- 1. Funded Projects 탭 내용 -->
+            <div id="tab-funded" class="tab-content active">
+                <ul class="funded-list">
+                    <li class="funded-item"><strong>교비연구비 신임교원정착 연구지원 사업 (PI)</strong> - “지능형 소프트 웨어러블 로봇 삭스 개발과 사용자 니즈 분석 (Development of Intelligent Soft Exoskeletal Socks and User Needs Analysis)”, Supported by Kyung Hee University in 2025 (2025.10.01~2026.09.30)</li>
+                    <li class="funded-item"><strong>국립대육성 신진연구자 연구성과 강화 지원사업 (PI)</strong> - “웨어러블 로봇 사용자 분석 (User Analysis for Wearable Robots)”, Supported by National University Development Project in 2024 (2024.07.01~2025.02.28)</li>
+                    <li class="funded-item"><strong>전북 라이즈 연구 클러스터 구축사업 (Co-I)</strong> - “전북문화관광 특성화를 위한 K+디지털 패션 융합 연구”, Supported by JB-RISE Research Cluster Development Project (2025.04.12~2025.08.31)</li>
+                    <li class="funded-item"><strong>민간기업 용역 사업 (PI)</strong> - “아웃도어 의복 착용성 평가 (Wearability Evaluation for Outdoor Clothing), Supported by K2 Korea (2024.08.12~2024.11.15)</li>
+                    <li class="funded-item"><strong>국립대육성사업, 지역지식선도 네트워크운영 지원사업 (PI)</strong> - “아동 안전 웨어러블 (Wearability Evaluation for Outdoor Clothing)”, Supported by National University Development Project in 2024 (2024.11.01~2025.02.28)</li>
+                    <li class="funded-item"><strong>신임교수 연구환경 조성 지원 사업 (PI)</strong> - “스마트 장갑 개발 및 평가 (Smart Gloves)”, Supported by Newly Appointed Professors of Jeonbuk National University (2024.04.01~2026.03.31)</li>
+                    <li class="funded-item"><strong>서울대 재활의학, 기계공학, 의류학과 융합 연구 (Participating Researcher)</strong> - “엑시얼 워커 웨어러블 로봇 개발 (Axial Walker Design)”, Supported by WEAR Lab, College of Medicine, and DYROS Lab, & College of Mechanical Engineering, Seoul National University</li>
+                    <li class="funded-item"><strong>서울대 의류학과 (Participating Researcher)</strong> - “웨어러블 로봇을 위한 주관적 사용성 평가 개발 Standard Scale for Subjective Usability Evaluation for Wearable Robots)”, Supported by WEAR Lab, Department of Clothing and Textiles, Seoul National University</li>
+                    <li class="funded-item"><strong>인간중심 소프트로봇기술 연구센터 (Participating Researcher)</strong>, Supported by Soft Robotics Research Center (2018.03-2024.02)</li>
+                    <li class="funded-item"><strong>(주)삼성전자 용역 과제 (Participating Researcher)</strong> - 보행 보조기기 사용성 평가, Supported by Samsung Electronics Cooperation Research Project (2022.05-2022.08)</li>
+                    <li class="funded-item"><strong>서울대 (의류+기계공학), 가톨릭대 (의학) 융복합연구 지원사업 (Participating Researcher)</strong> - “형상기억합금 니트 기반 다기능 손 재활 보조기기 개발 및 평가”, Supported by Seoul National University Research Grant (2021.09-2023.02)</li>
+                </ul>
+            </div>
+
+            <!-- 2. Research Projects 탭 내용 (사진 들어갈 자리 비워둠) -->
+            <div id="tab-projects" class="tab-content">
+                <p>여기에 연구 프로젝트 사진과 내용이 들어갈 예정입니다.</p>
+                <!-- 나중에 사진 2개 정렬 그리드 코드가 여기에 추가될 예정입니다. -->
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>COPYRIGHT © 2024 BY WearTech LAB. All Rights Reserved.</p>
+        <p>Tel. +82-2-961-0831 | Email. eeoom@khu.ac.kr</p>
+    </footer>
+
+    <!-- 탭 전환 자바스크립트 -->
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
