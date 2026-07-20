@@ -19,7 +19,6 @@
 
     <!-- 구글 폼 제출용 숨겨진 iframe -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
     <script>
         function submitEmail() {
             const email = document.getElementById('user-email').value;
@@ -52,12 +51,9 @@
             form.submit();
             document.body.removeChild(form);
 
-        // 이미 이메일을 입력한 적이 있으면 게이트 안 보이게
-        window.onload = function() {
-            if (localStorage.getItem('email_verified') === 'true') {
-                document.getElementById('email-gate').style.display = 'none';
-            }
-        };
+            // 제출 완료 후 게이트 숨기고 콘텐츠 보여줌 (이 줄이 있어야 화면이 넘어갑니다!)
+            document.getElementById('email-gate').style.display = 'none';
+        }
     </script>
     <!-- ★ 여기까지 이메일 게이트 코드 ★ -->
 
