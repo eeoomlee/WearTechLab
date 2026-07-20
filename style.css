@@ -652,7 +652,7 @@ a:hover {
     padding-bottom: 4px;
 }
 
-/* 가로로 2개씩 정렬 */
+/* 가로로 3개씩 정렬 */
 .student-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
