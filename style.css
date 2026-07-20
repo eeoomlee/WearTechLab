@@ -716,7 +716,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* 가로로 긴 사진은 한 줄 전체를 차지하도록 설정 */
+/* 가로로 긴 사진은 무조건 한 줄 전체를 차지하도록 설정 */
 .modal-gallery img.wide {
-    grid-column: span 2; 
+    grid-column: 1 / -1; 
 }
