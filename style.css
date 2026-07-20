@@ -513,3 +513,59 @@ a:hover {
 .funded-item:last-child {
     border-bottom: none;
 }
+
+/* === Research Projects 9칸 격자 디자인 === */
+.project-grid-9 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열로 정렬 (가로 3개) */
+    gap: 20px; /* 칸 사이 간격 */
+    margin-top: 20px;
+}
+
+.project-card-9 {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background: #fff;
+}
+
+.project-card-9:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card-9 img {
+    width: 100%;
+    aspect-ratio: 4/3; /* 가로가 더 긴 직사각형 비율 유지 */
+    object-fit: cover;
+    display: block;
+}
+
+.project-info-9 {
+    padding: 15px;
+    text-align: center;
+    background: #fff;
+}
+
+.project-info-9 h3 {
+    font-size: 16px;
+    color: #34495e;
+    margin: 0;
+}
+
+/* 모바일에서는 가로 2개씩 정렬 */
+@media (max-width: 768px) {
+    .project-grid-9 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 아주 작은 모바일에서는 가로 1개씩 정렬 */
+@media (max-width: 480px) {
+    .project-grid-9 {
+        grid-template-columns: 1fr;
+    }
+}
