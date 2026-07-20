@@ -35,15 +35,128 @@
             </nav>
         </div>
     </header>
+
     <main class="content-wrap">
         <section class="main-content">
-            <h1 class="page-title">Presentation</h1>
-            <p>여기에 발표 목록을 적을 예정입니다.</p>
+            <h1 class="page-title">Presentations</h1>
+            
+            <!-- 탭 버튼 -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('invited')">Invited Lecture</button>
+                <button class="tab-btn" onclick="showTab('international')">International Conference</button>
+                <button class="tab-btn" onclick="showTab('domestic')">Domestic Conference</button>
+            </div>
+
+            <!-- 1. Invited Lecture 탭 내용 -->
+            <div id="tab-invited" class="tab-content active">
+                <ul class="presentation-list">
+                    <li class="presentation-item"><strong>Lee, S. M.</strong> (2026, May 08). Rethinking Wearables in Korea: Culture, Clothing, and the Human Body [Invited lecture]. Eurasian Connections: Cultural Exchange Between Europe and Asia, Fu Jen Catholic University, New Taipei City, Taiwan.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong> (2026, May 05). Wearables in Korea: Where Culture, Clothing, and Technology Meet [Invited lecture]. Understanding East Asia: Civilization and Culture, Tunghai University, Taichung, Taiwan.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong> (2026, February 10). Ergonomics-driven innovation in Korea’s wearable technology landscape [Invited lecture]. Eurasia Series: An Intellectual Journey of Asia and the World, Ankara University, Ankara, Türkiye.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong> (2025, October). Ergonomic Design Approach to Wearable Products with Shape Memory Alloys. The Korean Fiber Society Fall Conference, BEXCO, Busan, Republic of Korea.</li>
+                </ul>
+                <div id="pagination-invited" class="pagination"></div>
+            </div>
+
+            <!-- 2. International Conference 탭 내용 -->
+            <div id="tab-international" class="tab-content">
+                <ul class="presentation-list">
+                    <li class="presentation-item">Lee, S. H., Hong, Y., <strong>Lee, S. M.</strong>, & Park, J. (2024, November). Uncovering pain points from users with subjective evaluation on wearable robot according to gender. Oral presented at the Annual Conference of International Textile and Apparel Association, California, USA.[2024 Paper of Distinction Award]</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Park, J. (2023, November). Development of a soft wearable exoglove for rehabilitation assistance: A novel application of knitted Shape-Memory Alloy as a flexible actuator. Oral presented at the Annual Conference of International Textile and Apparel Association, Maryland, USA.[International Textiles and Apparel Association (ITAA) 2023 Student Best Paper Award (Doctoral Level)]</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Hong, Y., Lee, S. H., & Park, J. (2023, November). The effect of ergonomic fit on walking performance of a gait-assist wearable robot. Oral presented at the Annual Conference of International Textile and Apparel Association, Maryland, USA.</li>
+                    <li class="presentation-item">Hong, Y., <strong>Lee, S. M.</strong>, Lee, S. H., & Park, J. (2023, November). Clothing pressure as a measure of wearability: Gender differences in a wearable robot. Poster presented at the Annual Conference of International Textile and Apparel Association, Maryland, USA.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Kim, M., & Park, J. (2022, October). An ergonomic glove pattern drafting method for hand assistive devices. Oral presented at the Annual Conference of International Textile and Apparel Association, Colorado, USA.</li>
+                    <li class="presentation-item">Shin, G., <strong>Lee, S. M.</strong>, Im, H., Kim, S., Kim, J. S., Park, J., & Ahn, S. H. (2022, August). Knitted SMA (Shape Memory Alloy)-based ergonomic hand rehabilitation glove. Oral presented at the International Conference on Energy, Aquatech and Sustainability, Ansan, South Korea. (Co-first author) [Best Oral Presentation Award]</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Lee, S. H., & Park, J. (2021, October). Travel wear for elderly women using the knitted shape memory alloys. Oral presented International Conference on Korean Society of Costume, Online. [Best Oral Presentation Award]</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Jung, W. K., Ahn. S. H., & Park, J. (2020, November). Development of a thermal massaging elbow brace using knit-based shape memory alloys. Poster presented at the Annual Conference of International Textile and Apparel Association, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Jung, W. K., Ahn. S. H., & Park, J. (2020, November). 4D knitting grip assist glove based on Shape Memory Alloys: Wearable device development and functionality assessment. Oral presented at the Annual Conference of International Textile and Apparel Association, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2020, May). Analysis of changes in Korean male hand size trends for redefining glove sizing systems. Poster presented at the International Conference on Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Kim, J. (2020, May). Analysis on the artistic value of hand knitting. Poster presented at the International Conference on Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2020, May). Analysis of changes in Korean male hand size trends for redefining glove sizing systems. Poster presented at the International Conference on Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2019, July). Analysis of the relationship between Korean hand and key body sizes. Poster presented at the SFTI-WSU International Conference. WSU Downtown Seattle.</li>
+                    <li class="presentation-item">Han, M. W., Jung, W. K., Kil, J. H., <strong>Lee, S. M.</strong>, Nam, Y. J., & Ahn, S. H. (2018, July). Shape Memory Alloy-based Textile Actuators and Applications. Oral presented at International Symposium of Precision Engineering and Sustainable Manufacturing, Sapporo, Japan</li>
+                </ul>
+                <div id="pagination-international" class="pagination"></div>
+            </div>
+
+            <!-- 3. Domestic Conference 탭 내용 -->
+            <div id="tab-domestic" class="tab-content">
+                <ul class="presentation-list">
+                    <li class="presentation-item">Kim, S. Y., Song, J. Y., Hong, E. S., & <strong>Lee, S. M.</strong> (2026, May). Rethinking dressing: Development of adaptive clothing for children with developmental disabilities through structural improvement of dressing. Poster presented at the Conference of the Korean Society of Clothing and Textile, Seoul.</li>
+                    <li class="presentation-item">Ryu, S. B., Hwang, Y. R., & <strong>Lee, S. M.</strong> (2025, November). Fit and wearability analysis of 3D body-mapping pattern design for wearable robot innerwear. Poster presented at the Conference of the Korea Society of Fashion & Textile Industry, Chungnam.</li>
+                    <li class="presentation-item">Yoo, H. W., Kim S. H., Park, Y. J., Kim D. H., & <strong>Lee, S. M.</strong> (2025, November). Dynamic wearability evaluation of outdoor jackets integrating 3D virtual fit maps and user feedback. Poster presented at the Conference of the Korea Society of Fashion & Textile Industry, Chungnam. [Best Presentation Award]</li>
+                    <li class="presentation-item">Choi, E. J., & <strong>Lee, S. M.</strong> (2025, October). Preliminary validation of a dexterity evaluation methodology for cut-resistant gloves for police officers. Poster presented at the Conference of the Korean Society of Clothing and Textile, Seoul.</li>
+                    <li class="presentation-item">Kim, H. J., & <strong>Lee, S. M.</strong> (2025, October). Material compatibility evaluation for wearable product design -User experience and skin reaction analysis-. Poster presented at the Conference of the Korean Society of Clothing and Textile, Seoul.</li>
+                    <li class="presentation-item">Park, B. J., Yu, H. W., <strong>Lee, S. M.</strong>, & Shim, S, I. (2024, October). Planning a windbreaker for individuals with upper limb disabilities: Applying Universal design principles. Poster presented at the Conference of the Korean Society of Clothing and Textile, Seoul.</li>
+                    <li class="presentation-item">Yu, H. W., Park, B. J., Shim, S, I., & <strong>Lee, S. M.</strong> (2024, October). Running jacket for upper limb amputees using a user-centered design approach. Poster presented at the Conference of the Korean Society of Clothing and Textile, Seoul.</li>
+                    <li class="presentation-item">Koh, Y. A., <strong>Lee, S. M.</strong>, & Park, J. (2022, March). On the clothing pressure of hanbok skirts in the late Joseon Dynasty with ergonomic considerations. Oral presented at the Conference of the Korean Society of Costume, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Lee, S. H., Lee, D., & Park, J. (2021, October). Analysis of human body suitability for bio-signal monitoring electronic bracelet. Oral presented at the Conference of the Korean Society of Clothing and Textile, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Park, J. (2021, April). Ergonomic analysis of foot characteristics of patients with Hallux Valgus for the development of wearable assistive devices. Poster presented at the Spring Conference of the Korean Society of Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Jung, W. K., Ahn. S. H., & Park, J. (2021, April). Design of 4D grip assistive glove using the knitted Shape Memory Alloy based on the evaluation of the finger flexion angle in elderly women. Oral presented at the Conference of the Korean Society of Clothing and Textile, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Youn, C. (2020, October). The effect of age labeling in advertising of rehabilitation product on baby boomers’ product attitude and purchase intention. Poster presented at the Autumn Conference of the Korean Society of Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Lee, J., Seol, S. H., Lee, S. H., Chen, L., & Park, J. (2020, October). Wearable hand rehab-assist product for post-stroke patients using sustainable materials. Poster presented at the Autumn Conference of the Korean Society of Clothing and Textiles, Online.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2019, October). Surface changes of the elbow for development of a functional elbow brace. Poster presented at the Autumn Conference of the Korean Society of Clothing and Textiles, Seoul.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2019, October). Analysis of finger pressure and pinch force in elderly women and women in their 20s. Poster presented at the Autumn Conference of the Ergonomics Society of Korea, Busan.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, & Nam, Y. J. (2019, May). A study on the hand surface changes based on pinch postures, Poster presented at the Spring Conference of the Ergonomics Society of Korea, Jeju.</li>
+                    <li class="presentation-item"><strong>Lee, S. M.</strong>, Jung, W. K., Ahn. S. H., & Nam, Y. (2018, October). Development of thermal massage elbow brace based on the knitted shape memory alloy materials, Poster presented at the Conference of the Korea Society of Fashion & Textile Industry, Jeju</li>
+                </ul>
+                <div id="pagination-domestic" class="pagination"></div>
+            </div>
+
         </section>
     </main>
+
     <footer class="site-footer">
         <p>COPYRIGHT © 2024 BY WearTech LAB. All Rights Reserved.</p>
         <p>Tel. +82-2-961-0831 | Email. eeoom@khu.ac.kr</p>
     </footer>
+
+    <script>
+        const itemsPerPage = 7; // 7개씩 페이지 나누기
+
+        function setupPagination(tabId) {
+            const list = document.querySelector(`#tab-${tabId} .presentation-list`);
+            const items = list.querySelectorAll('.presentation-item');
+            const paginationContainer = document.getElementById(`pagination-${tabId}`);
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+
+            paginationContainer.innerHTML = ''; // 초기화
+
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.innerText = i;
+                btn.onclick = () => showPage(tabId, i);
+                paginationContainer.appendChild(btn);
+            }
+            showPage(tabId, 1);
+        }
+
+        function showPage(tabId, page) {
+            const items = document.querySelectorAll(`#tab-${tabId} .presentation-item`);
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            items.forEach((item, index) => {
+                item.style.display = (index >= start && index < end) ? 'list-item' : 'none';
+            });
+
+            const paginationContainer = document.getElementById(`pagination-${tabId}`);
+            paginationContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            paginationContainer.children[page - 1].classList.add('active');
+        }
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(div => div.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // 초기 설정
+        setupPagination('invited');
+        setupPagination('international');
+        setupPagination('domestic');
+    </script>
 </body>
 </html>
