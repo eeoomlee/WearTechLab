@@ -8,7 +8,7 @@
 </head>
 <body>
 
-       <!-- ★ 이메일 + 비밀번호 입력 게이트 ★ -->
+          <!-- ★ 이메일 + 비밀번호 입력 게이트 ★ -->
     <div id="email-gate" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <h2>Please enter your email to view the content</h2>
         <p>Your email will be used only for laboratory records.</p>
@@ -30,22 +30,14 @@
             const accessCode = document.getElementById('access-code').value;
             const errorMsg = document.getElementById('error-msg');
             
-            // 1. 비밀번호 확인 (weartech0421)
-            const correctCode = 'weartech0421'; 
-            if (accessCode !== correctCode) {
-                errorMsg.textContent = 'Incorrect access code. Please try again.';
-                errorMsg.style.display = 'block';
-                return; // 비밀번호 틀리면 여기서 멈춤 (이메일 기록 안 됨)
-            }
-
-            // 2. 이메일 형식 검사
+            // 1. 이메일 형식 검사
             if (!email || !email.includes('@')) {
                 errorMsg.textContent = 'Please enter a valid email address.';
                 errorMsg.style.display = 'block';
                 return;
             }
 
-            // 3. 구글 스크립트로 이메일 전송
+            // 2. 구글 스크립트로 이메일 전송 (비밀번호 검사 전에 일단 기록!)
             const scriptUrl = 'https://script.google.com/macros/s/AKfycbwH3Fj2ySogQ3xbAYKKumUhOVtw_vaDjmdgfbgbqtqPHetbIvbjxSeDN9kzyxnhmGfL/exec'; 
             
             fetch(scriptUrl, {
@@ -55,13 +47,22 @@
             })
             .then(response => response.json())
             .then(data => {
-                // 전송 성공하면 화면 넘기기
-                document.getElementById('email-gate').style.display = 'none';
+                console.log('Email saved!', data);
             })
             .catch(error => {
-                // 에러가 나도 사용자는 화면을 볼 수 있게 넘겨줌
-                document.getElementById('email-gate').style.display = 'none';
+                console.error('Error!', error);
             });
+
+            // 3. 비밀번호 확인 (기록은 되었지만, 비밀번호가 틀리면 화면을 안 넘겨줌)
+            const correctCode = 'weartech0421'; 
+            if (accessCode !== correctCode) {
+                errorMsg.textContent = 'Incorrect access code. Please try again.';
+                errorMsg.style.display = 'block';
+                return; // 화면 안 넘김
+            }
+
+            // 4. 비밀번호까지 맞으면 화면 넘기기
+            document.getElementById('email-gate').style.display = 'none';
         }
     </script>
     <!-- ★ 여기까지 이메일 게이트 코드 ★ -->
