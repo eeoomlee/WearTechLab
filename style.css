@@ -701,7 +701,7 @@ a:hover {
 .modal-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 기본 2열 정렬 (세로 사진용) */
-    gap: 20px;
+    gap: 50px 20px; /* <--- 위아래 50px, 좌우 20px로 변경! */
     margin-top: 30px;
     max-width: 80%; /* 전체 갤러리 크기 제한 */
     margin-left: auto;
