@@ -30,24 +30,26 @@
                 return;
             }
 
-            const formUrl = 'https://docs.google.com/forms/d/e/15cYboe1F59UbJ-4lFtL-BDcmcmAx3gh7q1FQH0yE3YQ/formResponse';
+            // 아까 복사한 스프레드시트 웹앱 URL을 아래 따옴표 안에 넣으세요!
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwH3Fj2ySogQ3xbAYKKumUhOVtw_vaDjmdgfbgbqtqPHetbIvbjxSeDN9kzyxnhmGfL/exec'; 
             
-            const form = document.createElement('form');
-            form.action = formUrl;
-            form.method = 'POST';
-            form.target = 'hidden_iframe';
-
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'entry.435364869';
-            input.value = email;
-            form.appendChild(input);
-
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
-
-            document.getElementById('email-gate').style.display = 'none';
+            fetch(scriptUrl, {
+                method: 'POST',
+                body: JSON.stringify({ email: email }),
+                // 구글 스크립트는 text/plain을 선호합니다 (CORS 우회)
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email saved!', data);
+                // 전송 성공하면 화면 넘기기
+                document.getElementById('email-gate').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error!', error);
+                // 에러가 나도 사용자는 화면을 볼 수 있게 넘겨줌
+                document.getElementById('email-gate').style.display = 'none';
+            });
         }
     </script>
     <!-- ★ 여기까지 이메일 게이트 코드 ★ -->
