@@ -23,37 +23,34 @@
             const email = document.getElementById('user-email').value;
             const errorMsg = document.getElementById('error-msg');
             
-            // 이메일 형식 검사
             if (!email || !email.includes('@')) {
                 errorMsg.style.display = 'block';
                 return;
             }
 
-            // 구글 폼 주소
-            const formUrl = 'https://docs.google.com/forms/d/e/15cYboe1F59UbJ-4lFtL-BDcmcmAx3gh7q1FQH0yE3YQ/formResponse';
+            // 아까 복사한 스프레드시트 웹앱 URL을 아래 따옴표 안에 넣으세요!
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbwH3Fj2ySogQ3xbAYKKumUhOVtw_vaDjmdgfbgbqtqPHetbIvbjxSeDN9kzyxnhmGfL/exec'; 
             
-            // 도깨니 폼(iframe)을 이용해 구글 폼에 제출
-            const form = document.createElement('form');
-            form.action = formUrl;
-            form.method = 'POST';
-            form.target = 'hidden_iframe'; // 이 창에서 제출하여 화면 전환 방지
-
-            // 이메일 데이터 입력
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'entry.435364869'; // 아까 찾은 엔트리 번호!
-            input.value = email;
-            form.appendChild(input);
-
-            // 폼을 화면에 잠깐 띄워서 제출하고 바로 지움
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
-
-            // 제출 완료 후 게이트 숨기고 콘텐츠 보여줌 (이 줄이 있어야 화면이 넘어갑니다!)
-            document.getElementById('email-gate').style.display = 'none';
+            fetch(scriptUrl, {
+                method: 'POST',
+                body: JSON.stringify({ email: email }),
+                // 구글 스크립트는 text/plain을 선호합니다 (CORS 우회)
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Email saved!', data);
+                // 전송 성공하면 화면 넘기기
+                document.getElementById('email-gate').style.display = 'none';
+            })
+            .catch(error => {
+                console.error('Error!', error);
+                // 에러가 나도 사용자는 화면을 볼 수 있게 넘겨줌
+                document.getElementById('email-gate').style.display = 'none';
+            });
         }
     </script>
+    
     <!-- ★ 여기까지 이메일 게이트 코드 ★ -->
     
     <header class="site-header">
