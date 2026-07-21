@@ -87,7 +87,14 @@
             <h1 class="page-title">Lab News</h1>
             
             <!-- 뉴스 사진 6개 격자 (2x3), 역순 6->1, 제목 없음 -->
-            <div class="project-grid-9">
+            <div class="project-grid-11">
+                <!-- 8번 칸 -->
+                <div class="project-card-9" onclick="openModal('modal8')">
+                <img src="news8.jpg" alt="News 8">   
+                <!-- 7번 칸 -->
+                <div class="project-card-9" onclick="openModal('modal7')">
+                <img src="news7.jpg" alt="News 7">
+               
                 <!-- 6번 칸 -->
                 <div class="project-card-9" onclick="openModal('modal6')">
                     <img src="news6.jpg" alt="News 6">
@@ -127,7 +134,29 @@
 
     <!-- ★ 숨겨진 상세 내용 (클릭 시 팝업창에 표시됨) ★ -->
     <!-- 상세 사진 이름을 news로 시작하도록 모두 변경했습니다! -->
-    
+        <!-- 6번 뉴스 -->
+    <div id="modal6" class="hidden-content">
+        <h2>Invited Lecture at Ankara University</h2>
+        <img src="news8.jpg" alt="News 8 Main" style="width:100%; border-radius:8px; margin-bottom:20px;">
+        <br>
+        <br>
+        <p>Soo-Min Lee delivered an invited lecture titled “Ergonomics-Driven Innovation in Korea’s Wearable Technology Landscape” at Ankara University, Türkiye, on February 10, 2026. The lecture introduced human-centered and ergonomics-driven approaches to wearable technology development in Korea as part of The Eurasian Series: An Intellectual Journey of Asia and the World.
+</p>
+        
+        <div class="modal-gallery">
+            <!-- 가로 사진은 class="wide" 추가, 세로 사진은 생략 -->
+            <img src="news8-1.jpg" alt="Detail 3">
+            <img src="news8-2.jpg" alt="Detail 8">
+            <img class="wide" src="news8-3.jpg" alt="Detail 9">
+            <img class="wide" src="news8-4.jpg" alt="Detail 10">
+            <img class="wide" src="news8-5.jpg" alt="Detail 11">
+            <img class="wide" src="news8-6.jpg" alt="Detail 3">
+            <img class="wide" src="news8-7.jpg" alt="Detail 8">
+            <img class="wide" src="news8-8.jpg" alt="Detail 9">
+            <img class="wide" src="news8-9.jpg" alt="Detail 10">
+        </div>
+    </div>
+                    
     <!-- 6번 뉴스 -->
     <div id="modal6" class="hidden-content">
         <h2>AI Expo Tokyo</h2>
