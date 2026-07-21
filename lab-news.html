@@ -86,15 +86,16 @@
         <section class="main-content">
             <h1 class="page-title">Lab News</h1>
             
-            <!-- 뉴스 사진 6개 격자 (2x3), 역순 6->1, 제목 없음 -->
-            <div class="project-grid-11">
+            <!-- 뉴스 사진 격자 (2열 정렬), 역순 8->1 -->
+            <div class="project-grid-9">
                 <!-- 8번 칸 -->
                 <div class="project-card-9" onclick="openModal('modal8')">
-                <img src="news8.jpg" alt="News 8">   
+                    <img src="news8.jpg" alt="News 8">
+                </div>
                 <!-- 7번 칸 -->
                 <div class="project-card-9" onclick="openModal('modal7')">
-                <img src="news7.jpg" alt="News 7">
-               
+                    <img src="news7.jpg" alt="News 7">
+                </div>
                 <!-- 6번 칸 -->
                 <div class="project-card-9" onclick="openModal('modal6')">
                     <img src="news6.jpg" alt="News 6">
@@ -133,18 +134,16 @@
     </div>
 
     <!-- ★ 숨겨진 상세 내용 (클릭 시 팝업창에 표시됨) ★ -->
-    <!-- 상세 사진 이름을 news로 시작하도록 모두 변경했습니다! -->
-        <!-- 8번 뉴스 -->
+    
+    <!-- 8번 뉴스 -->
     <div id="modal8" class="hidden-content">
         <h2>Invited Lecture at Ankara University</h2>
         <img src="news8.jpg" alt="News 8 Main" style="width:100%; border-radius:8px; margin-bottom:20px;">
         <br>
         <br>
-        <p>Soo-Min Lee delivered an invited lecture titled “Ergonomics-Driven Innovation in Korea’s Wearable Technology Landscape” at Ankara University, Türkiye, on February 10, 2026. The lecture introduced human-centered and ergonomics-driven approaches to wearable technology development in Korea as part of The Eurasian Series: An Intellectual Journey of Asia and the World.
-</p>
+        <p>Soo-Min Lee delivered an invited lecture titled “Ergonomics-Driven Innovation in Korea’s Wearable Technology Landscape” at Ankara University, Türkiye, on February 10, 2026. The lecture introduced human-centered and ergonomics-driven approaches to wearable technology development in Korea as part of The Eurasian Series: An Intellectual Journey of Asia and the World.</p>
         
         <div class="modal-gallery">
-            <!-- 가로 사진은 class="wide" 추가, 세로 사진은 생략 -->
             <img src="news8-1.jpg" alt="Detail 1">
             <img src="news8-2.jpg" alt="Detail 2">
             <img class="wide" src="news8-3.jpg" alt="Detail 3">
@@ -156,7 +155,8 @@
             <img class="wide" src="news8-9.jpg" alt="Detail 9">
         </div>
     </div>
-            <!-- 7번 뉴스 -->
+
+    <!-- 7번 뉴스 -->
     <div id="modal7" class="hidden-content">
         <h2>2025 KSCT Fall Conference</h2>
         <img src="news7.jpg" alt="News 7 Main" style="width:100%; border-radius:8px; margin-bottom:20px;">
@@ -165,7 +165,6 @@
         <p>Lab members presented their research through poster sessions at the 2025 Fall Conference of the Korean Society of Clothing and Textiles. Their work was recognized with the Outstanding Paper Presentation Award for its academic quality and contribution.</p>
         
         <div class="modal-gallery">
-            <!-- 가로 사진은 class="wide" 추가, 세로 사진은 생략 -->
             <img class="wide" src="news7-1.jpg" alt="Detail 1">
             <img src="news7-2.jpg" alt="Detail 2">
             <img src="news7-3.jpg" alt="Detail 3">
@@ -173,6 +172,7 @@
             <img src="news7-5.jpg" alt="Detail 5">
         </div>
     </div>                
+
     <!-- 6번 뉴스 -->
     <div id="modal6" class="hidden-content">
         <h2>AI Expo Tokyo</h2>
@@ -182,7 +182,6 @@
         <p>Dr. Soo-Min Lee visited AI Expo Tokyo and NexTech Week 2024 to explore emerging technologies in artificial intelligence, robotics, and human-centered systems. The visit also included observations of innovative fashion, textile, and retail environments in Tokyo, providing inspiration for future wearable technology research.</p>
         
         <div class="modal-gallery">
-            <!-- 가로 사진은 class="wide" 추가, 세로 사진은 생략 -->
             <img class="wide" src="news6-3.jpg" alt="Detail 1">
             <img class="wide" src="news6-11.jpg" alt="Detail 2">
             <img src="news6-4.jpg" alt="Detail 3">
