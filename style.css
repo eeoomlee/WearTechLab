@@ -823,3 +823,19 @@ a:hover {
         padding: 5px 6px;
     }
 }
+
+/* === Home 메인 이미지 === */
+
+.home-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    display: block;
+}
