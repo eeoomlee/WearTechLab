@@ -835,7 +835,6 @@ a:hover {
 
 .main-image {
     width: 100%;
-    max-width: 1600px;
     height: auto;
     display: block;
 }
