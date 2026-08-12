@@ -6,6 +6,61 @@
     <title>WearTech Lab</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+
+    const popup = document.getElementById("specialPopup");
+
+
+    /* 그냥 닫기 */
+    function closePopup() {
+        popup.style.display = "none";
+    }
+
+
+    /* 오늘 하루 열지 않기 */
+    function hidePopupToday() {
+
+        const now = new Date();
+
+        const today =
+            now.getFullYear() + "-" +
+            String(now.getMonth() + 1).padStart(2, "0") + "-" +
+            String(now.getDate()).padStart(2, "0");
+
+        localStorage.setItem("specialCollectionPopupDate", today);
+
+        popup.style.display = "none";
+    }
+
+
+    /* 페이지 접속 시 오늘 숨김 여부 확인 */
+    window.addEventListener("DOMContentLoaded", function () {
+
+        const now = new Date();
+
+        const today =
+            now.getFullYear() + "-" +
+            String(now.getMonth() + 1).padStart(2, "0") + "-" +
+            String(now.getDate()).padStart(2, "0");
+
+        const hiddenDate =
+            localStorage.getItem("specialCollectionPopupDate");
+
+
+        if (hiddenDate === today) {
+
+            popup.style.display = "none";
+
+        } else {
+
+            popup.style.display = "flex";
+
+        }
+
+    });
+
+</script>
+    
 <body>
     <!-- 헤더 (로고 + 상단 메뉴) -->
     <header class="site-header">
