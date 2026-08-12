@@ -754,7 +754,12 @@ a:hover {
 
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.30);
 }
-
+/* desktop에서만 조금 더 크게 */
+@media (min-width: 1024px) {
+    .popup-box {
+        width: 1020px;
+    }
+}
 .popup-image-link {
     display: block;
 }
