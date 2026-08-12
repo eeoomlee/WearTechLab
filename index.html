@@ -20,11 +20,18 @@
                      class="popup-image">
             </a>
 
-            <div class="popup-buttons">
-                <button type="button" onclick="hidePopupToday()">오늘 하루 열지 않기</button>
-                <span class="popup-divider">|</span>
-                <button type="button" onclick="closePopup()">닫기</button>
-            </div>
+           <div class="popup-buttons">
+    <button type="button" onclick="hidePopupToday()">
+        오늘 하루 열지 않기
+    </button>
+
+    <span class="popup-divider">|</span>
+
+    <button type="button"
+            onclick="document.getElementById('specialPopup').style.display='none';">
+        닫기
+    </button>
+</div>
         </div>
     </div>
 
